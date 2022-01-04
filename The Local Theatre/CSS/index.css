@@ -1,0 +1,208 @@
+*{
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+body{
+    min-height: 100vh;
+    background: #111;
+}
+/*----------Header-----------*/
+header{
+    width: 100%;
+    min-height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #111;
+    position: relative;
+}
+.logo{
+    font-size: 1.5em;
+    color: greenyellow;/*darkcyan;*/
+    margin-left: 50px;
+}
+.logo h2{
+    letter-spacing: 2px;
+}
+.menu{
+    flex: 2;
+    text-align: right;
+    margin-right: 50px;
+
+}
+.menu a{
+    color: whitesmoke;
+    height: 50%;
+    text-decoration: none;
+    padding: 10px 15px;
+    font: size 1.5em;
+    list-style: none;
+    display: inline-block;
+}
+.menu a:hover{
+    color: greenyellow;
+
+}
+.menu .responsive a.icon{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.5em;
+    display: none;
+}
+
+/*-----------------Section----------------*/
+section{
+    position: relative;
+}
+.container{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+.slides{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: fade 1s ease-in-out;
+}
+@keyframes fade{
+    to{
+        opacity: 1;
+    }
+    from{
+        opacity: 0;
+    }
+}
+.slides img{
+    width: 100%;
+    height: 100%;
+    display:block;
+    position: absolute;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+.slides .content{
+    position: absolute;
+    left: 50px;
+    bottom: 100px;
+    color: white;
+    max-width: 400px;
+    text-shadow: 0 0 1px #000;
+}
+.content h2{
+    font: size 2em;
+    letter-spacing: 2px;
+}
+.content p{
+    line-height: 1.4;
+    margin: 10px 0;
+}
+.content a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #0009;
+    padding: 10px 15px;
+}
+.content a:hover{
+    background: greenyellow;
+}
+/*-------------recommend----------*/
+.row{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 30px;
+}
+.row h2{
+    color: rgb(179, 255, 0);
+    letter-spacing: 2px;
+}
+.nav{
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+.nav .nav-bar{
+    width: 100%;
+    height: 150px;
+    display: flex;   
+}
+.nav-bar .column{
+    min-width:10%;
+    height: 100%;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+.column img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.active{
+    transform: scale(1.1);
+    border: 1px solid #fff;
+}
+.prev, .next{
+    position: absolute;
+    top: 30%;
+    font-size: 3.5em;
+    background: #0009;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+  
+}
+.next{
+    right: 0;
+}
+
+.txt{
+    font-size: 1em;
+    color: rgb(73, 73, 73);/*darkcyan;*/
+    margin-left: 50px;
+}
+/*-------------responsive---------------*/
+@media(max-width: 1190px)/*1100*/{
+    .logo{
+        margin-left: 50px;
+    }
+
+    .menu{
+        margin-right: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+
+    .logo{
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .menu{
+        position: absolute;
+        left: 0px;
+        height: 1;
+        bottom:0vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+    
+    
+
